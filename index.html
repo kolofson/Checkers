@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Let's Play Checkers!</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Checkers</h1>
+		<p id="msg">Red Goes First!</p>
+		<div id="board">
+			<table id="boardSpots">	
+				<tr id="row_A">
+					<td id="A1" class="odd"></td>
+					<td id="A2" class="even"><div id="A2Aligner" align="center"><div id="r1" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+					<td id="A3" class="odd"></td>
+					<td id="A4" class="even"><div id="A4Aligner" align="center"><div id="r2" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+					<td id="A5" class="odd"></td>
+					<td id="A6" class="even"><div id="A6Aligner" align="center"><div id="r3" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+					<td id="A7" class="odd"></td>
+					<td id="A8" class="even"><div id="A8Aligner" align="center"><div id="r4" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+				</tr>
+				<tr id="row_B">
+					<td id="B1" class="even"><div id="B1Aligner" align="center"><div id="r5" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+					<td id="B2" class="odd"></td>
+					<td id="B3" class="even"><div id="B3Aligner" align="center"><div id="r6" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+					<td id="B4" class="odd"></td>
+					<td id="B5" class="even"><div id="B5Aligner" align="center"><div id="r7" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+					<td id="B6" class="odd"></td>
+					<td id="B7" class="even"><div id="B7Aligner" align="center"><div id="r8" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+					<td id="B8" class="odd"></td>
+				</tr>
+				<tr id="row_C">
+					<td id="C1" class="odd"></td>
+					<td id="C2" class="even"><div id="C2Aligner" align="center"><div id="r9" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+					<td id="C3" class="odd"></td>
+					<td id="C4" class="even"><div id="C4Aligner" align="center"><div id="r10" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+					<td id="C5" class="odd"></td>
+					<td id="C6" class="even"><div id="C6Aligner" align="center"><div id="r11" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+					<td id="C7" class="odd"></td>
+					<td id="C8" class="even"><div id="C8Aligner" align="center"><div id="r12" class="redChecker" onClick="chooseMove(event);"></div></div></td>
+				</tr>
+				<tr id="row_D">
+					<td id="D1" class="even"><div id="D1Aligner" align="center"></div></td>
+					<td id="D2" class="odd"></td>
+					<td id="D3" class="even"><div id="D3Aligner" align="center"></div></td>
+					<td id="D4" class="odd"></td>
+					<td id="D5" class="even"><div id="D5Aligner" align="center"></div></td>
+					<td id="D6" class="odd"></td>
+					<td id="D7" class="even"><div id="D7Aligner" align="center"></div></td>
+					<td id="D8" class="odd"></td>
+				</tr>
+				<tr id="row_E">
+					<td id="E1" class="odd"></td>
+					<td id="E2" class="even"><div id="E2Aligner" align="center"></div></td>
+					<td id="E3" class="odd"></td>
+					<td id="E4" class="even"><div id="E4Aligner" align="center"></div></td>
+					<td id="E5" class="odd"></td>
+					<td id="E6" class="even"><div id="E6Aligner" align="center"></div></td>
+					<td id="E7" class="odd"></td>
+					<td id="E8" class="even"><div id="E8Aligner" align="center"></div></td>
+				</tr>
+				<tr id="row_F">
+					<td id="F1" class="even"><div id="F1Aligner"  align="center"><div id="w1" class="whiteChecker"></div></div></td>
+					<td id="F2" class="odd"></td>
+					<td id="F3" class="even"><div id="F3Aligner" align="center"><div id="w2" class="whiteChecker"></div></div></td>
+					<td id="F4" class="odd"></td>
+					<td id="F5" class="even"><div id="F5Aligner" align="center"><div id="w3" class="whiteChecker"></div></div></td>
+					<td id="F6" class="odd"></td>
+					<td id="F7" class="even"><div id="F7Aligner" align="center"><div id="w4" class="whiteChecker"></div></div></td>
+					<td id="F8" class="odd"></td>
+				</tr>
+				<tr id="row_G">
+					<td id="G1" class="odd"></td>
+					<td id="G2" class="even"><div id="G2Aligner" align="center"><div id="w5" class="whiteChecker"></div></div></td>
+					<td id="G3" class="odd"></td>
+					<td id="G4" class="even"><div id="G4Aligner" align="center"><div id="w6" class="whiteChecker"></div></div></td>
+					<td id="G5" class="odd"></td>
+					<td id="G6" class="even"><div id="G6Aligner" align="center"><div id="w7" class="whiteChecker"></div></div></td>
+					<td id="G7" class="odd"></td>
+					<td id="G8" class="even"><div id="G8Aligner" align="center"><div id="w8" class="whiteChecker"></div></div></td>
+				</tr>
+					<tr id="row_H">
+					<td id="H1" class="even"><div id="H1Aligner" align="center"><div id="w9" class="whiteChecker"></div></div></td>
+					<td id="H2" class="odd"></td>
+					<td id="H3" class="even"><div id="H3Aligner" align="center"><div id="w10" class="whiteChecker"></div></div></td>
+					<td id="H4" class="odd"></td>
+					<td id="H5" class="even"><div id="H5Aligner" align="center"><div id="w11" class="whiteChecker"></div></div></td>
+					<td id="H6" class="odd"></td>
+					<td id="H7" class="even"><div id="H7Aligner" align="center"><div id="w12" class="whiteChecker"></div></div></td>
+					<td id="H8" class="odd"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+		<!-- loads faster here -->
+	<script src="js/main.js"></script>
+</body>
+</html>

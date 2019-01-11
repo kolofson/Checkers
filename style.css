@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	
+	font-family: "Scoob";
+	src: url(../../PhraseGenerator/fonts/scoobydoo.ttf);
+}
+
+body {
+	
+	background-color: royalblue;
+}
+
+h1 {
+	
+	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: darkgreen;
+	color: purple;
+	font-family: "Scoob";
+	font-size: 40pt;
+}
+
+td {
+	
+	width: 100px;
+	height: 100px;
+	border: solid tan 10px;
+}
+
+#board {
+	
+	background-color: saddlebrown;
+	border: solid black 15px;	
+	width: 900px;
+}
+
+#msg {
+	
+	font-size: 30pt;
+	font-family: "Scoob";
+	color: firebrick;
+}
+
+.odd {
+	
+	background-color: white;
+}
+
+.even {
+	
+	background-color: black;
+}
+
+.redChecker {
+	
+	height: 50px;
+	width: 50px;
+	background-color: red;
+	border: solid red 2px;
+	border-radius: 40px;
+	position: relative;
+}
+
+.hover:hover {
+	
+	opacity: 0.6;	
+}
+
+.whiteChecker {
+	
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	border: solid white 2px;
+	border-radius: 40px;
+}
+
